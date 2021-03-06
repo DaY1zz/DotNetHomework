@@ -1,0 +1,6 @@
+D:\VS2019\Project\HomeWork2\HomeWork_2.2\bin\Debug\HomeWork_2.2.exe.config
+D:\VS2019\Project\HomeWork2\HomeWork_2.2\bin\Debug\HomeWork_2.2.exe
+D:\VS2019\Project\HomeWork2\HomeWork_2.2\bin\Debug\HomeWork_2.2.pdb
+D:\VS2019\Project\HomeWork2\HomeWork_2.2\obj\Debug\HomeWork_2.2.csproj.CoreCompileInputs.cache
+D:\VS2019\Project\HomeWork2\HomeWork_2.2\obj\Debug\HomeWork_2.2.exe
+D:\VS2019\Project\HomeWork2\HomeWork_2.2\obj\Debug\HomeWork_2.2.pdb

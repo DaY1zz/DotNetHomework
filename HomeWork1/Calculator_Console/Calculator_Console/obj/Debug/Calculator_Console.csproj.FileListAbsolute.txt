@@ -1,0 +1,7 @@
+D:\VS2019\Project\Calculator_Console\Calculator_Console\obj\Debug\Calculator_Console.csprojAssemblyReference.cache
+D:\VS2019\Project\Calculator_Console\Calculator_Console\obj\Debug\Calculator_Console.csproj.CoreCompileInputs.cache
+D:\VS2019\Project\Calculator_Console\Calculator_Console\bin\Debug\Calculator_Console.exe.config
+D:\VS2019\Project\Calculator_Console\Calculator_Console\bin\Debug\Calculator_Console.exe
+D:\VS2019\Project\Calculator_Console\Calculator_Console\bin\Debug\Calculator_Console.pdb
+D:\VS2019\Project\Calculator_Console\Calculator_Console\obj\Debug\Calculator_Console.exe
+D:\VS2019\Project\Calculator_Console\Calculator_Console\obj\Debug\Calculator_Console.pdb
