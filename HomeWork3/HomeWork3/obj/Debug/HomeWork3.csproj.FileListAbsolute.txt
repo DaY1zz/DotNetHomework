@@ -1,0 +1,7 @@
+D:\VS2019\Project\DotNetHomeWork\HomeWork3\HomeWork3\bin\Debug\HomeWork3.exe.config
+D:\VS2019\Project\DotNetHomeWork\HomeWork3\HomeWork3\bin\Debug\HomeWork3.exe
+D:\VS2019\Project\DotNetHomeWork\HomeWork3\HomeWork3\bin\Debug\HomeWork3.pdb
+D:\VS2019\Project\DotNetHomeWork\HomeWork3\HomeWork3\obj\Debug\HomeWork3.csprojAssemblyReference.cache
+D:\VS2019\Project\DotNetHomeWork\HomeWork3\HomeWork3\obj\Debug\HomeWork3.csproj.CoreCompileInputs.cache
+D:\VS2019\Project\DotNetHomeWork\HomeWork3\HomeWork3\obj\Debug\HomeWork3.exe
+D:\VS2019\Project\DotNetHomeWork\HomeWork3\HomeWork3\obj\Debug\HomeWork3.pdb
