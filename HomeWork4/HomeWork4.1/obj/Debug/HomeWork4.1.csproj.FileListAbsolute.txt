@@ -1,0 +1,7 @@
+D:\VS2019\Project\HomeWork4\HomeWork4.1\bin\Debug\HomeWork4.1.exe.config
+D:\VS2019\Project\HomeWork4\HomeWork4.1\bin\Debug\HomeWork4.1.exe
+D:\VS2019\Project\HomeWork4\HomeWork4.1\bin\Debug\HomeWork4.1.pdb
+D:\VS2019\Project\HomeWork4\HomeWork4.1\obj\Debug\HomeWork4.1.csprojAssemblyReference.cache
+D:\VS2019\Project\HomeWork4\HomeWork4.1\obj\Debug\HomeWork4.1.csproj.CoreCompileInputs.cache
+D:\VS2019\Project\HomeWork4\HomeWork4.1\obj\Debug\HomeWork4.1.exe
+D:\VS2019\Project\HomeWork4\HomeWork4.1\obj\Debug\HomeWork4.1.pdb
