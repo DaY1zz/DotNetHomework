@@ -110,6 +110,9 @@ namespace HomeWork5.Tests
         {
             OrderService.Export("D:\\VS2019\\Project\\DotNetHomeWork\\HomeWork6\\HomeWork6\\bin\\Debug\\netcoreapp3.1", "Orders");
             Assert.IsTrue(File.Exists("D:\\VS2019\\Project\\DotNetHomeWork\\HomeWork6\\HomeWork6\\bin\\Debug\\netcoreapp3.1\\Orders.xml"));
+
+
+
         }
 
         [TestMethod()]
@@ -121,6 +124,12 @@ namespace HomeWork5.Tests
             OrderService.DelOrder("004");
             OrderService.DelOrder("005");
             OrderService.Import("D:\\VS2019\\Project\\DotNetHomeWork\\HomeWork6\\HomeWork6\\bin\\Debug\\netcoreapp3.1\\Orders.xml");
+            //测试不存在的文件
+            Assert.ThrowsException<ApplicationException>(()=>OrderService.Import("D:\\Orders.xml"));
+            //测试错误文件
+            Assert.ThrowsException<InvalidOperationException>(()=>OrderService.Import("D:\\VS2019\\Project\\DotNetHomeWork\\HomeWork6\\HomeWork6\\bin\\Debug\\netcoreapp3.1\\Orders2.xml"));
+            //测试空文件
+            Assert.ThrowsException<InvalidOperationException>(() => OrderService.Import("D:\\VS2019\\Project\\DotNetHomeWork\\HomeWork6\\HomeWork6\\bin\\Debug\\netcoreapp3.1\\Orders2.xml"));
 
         }
     }

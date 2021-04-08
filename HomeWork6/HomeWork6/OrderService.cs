@@ -139,7 +139,7 @@ namespace HomeWork5
                 Order[] orderArray = xmlSerializer.Deserialize(fs) as Order[];
 
                 if (orderArray == null)
-                    throw new ApplicationException("文件错误");
+                    throw new ApplicationException("文件内容为空");
 
                 foreach (Order o in orderArray)
                     AddOrder(o);
