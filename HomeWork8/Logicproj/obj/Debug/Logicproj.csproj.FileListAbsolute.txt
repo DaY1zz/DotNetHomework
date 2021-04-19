@@ -1,0 +1,7 @@
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\Logicproj\bin\Debug\Logicproj.exe.config
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\Logicproj\bin\Debug\Logicproj.exe
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\Logicproj\bin\Debug\Logicproj.pdb
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\Logicproj\obj\Debug\Logicproj.csprojAssemblyReference.cache
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\Logicproj\obj\Debug\Logicproj.csproj.CoreCompileInputs.cache
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\Logicproj\obj\Debug\Logicproj.exe
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\Logicproj\obj\Debug\Logicproj.pdb

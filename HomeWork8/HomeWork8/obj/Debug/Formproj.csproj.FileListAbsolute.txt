@@ -1,0 +1,15 @@
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\HomeWork8\bin\Debug\HomeWork8.exe.config
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\HomeWork8\bin\Debug\HomeWork8.exe
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\HomeWork8\bin\Debug\HomeWork8.pdb
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\HomeWork8\bin\Debug\Logicproj.exe
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\HomeWork8\bin\Debug\Logicproj.pdb
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\HomeWork8\bin\Debug\Logicproj.exe.config
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\HomeWork8\obj\Debug\Formproj.csprojAssemblyReference.cache
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\HomeWork8\obj\Debug\HomeWork8.MainForm.resources
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\HomeWork8\obj\Debug\HomeWork8.Properties.Resources.resources
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\HomeWork8\obj\Debug\Formproj.csproj.GenerateResource.cache
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\HomeWork8\obj\Debug\Formproj.csproj.CoreCompileInputs.cache
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\HomeWork8\obj\Debug\Formproj.csproj.CopyComplete
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\HomeWork8\obj\Debug\HomeWork8.exe
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\HomeWork8\obj\Debug\HomeWork8.pdb
+D:\VS2019\Project\DotNetHomeWork\HomeWork8\HomeWork8\obj\Debug\HomeWork8.OrderOperationForm.resources
