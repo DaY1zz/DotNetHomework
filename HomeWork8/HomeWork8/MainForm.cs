@@ -164,12 +164,20 @@ namespace HomeWork8
             }
         }
 
+        /// <summary>
+        /// 点击订单表项目，订单明细表显示对应明细
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OrderdataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            //获取目标订单号
             string targetOrderId = OrderdataGridView.CurrentRow.Cells[0].Value as String;
             if (targetOrderId != null)
             {
                 Order targetOrder = orderService.QueryById(targetOrderId);
+
+                //新映射一个表，显示明细详细信息，同时修改OrderDetailDataGridView各列绑定的属性
                 var targetList = targetOrder.OrderDetails.Select(
                     o => new
                     {

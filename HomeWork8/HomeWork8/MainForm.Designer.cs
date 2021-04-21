@@ -31,6 +31,12 @@ namespace HomeWork8
         {
             this.components = new System.ComponentModel.Container();
             this.OrderdataGridView = new System.Windows.Forms.DataGridView();
+            this.orderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalMoneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deliveryAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrderbindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.DeleteBtn = new System.Windows.Forms.Button();
             this.DeletetextBox = new System.Windows.Forms.TextBox();
@@ -46,28 +52,21 @@ namespace HomeWork8
             this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ModifyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orderDetailDataGridView = new System.Windows.Forms.DataGridView();
-            this.GoodsIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.goodPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.GoodsIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.moneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.orderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalMoneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deliveryAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrderbindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             ((System.ComponentModel.ISupportInitialize)(this.OrderdataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderbindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderDetailDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderDetailBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OrderbindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // OrderdataGridView
@@ -96,6 +95,48 @@ namespace HomeWork8
             this.OrderdataGridView.Size = new System.Drawing.Size(905, 226);
             this.OrderdataGridView.TabIndex = 0;
             this.OrderdataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OrderdataGridView_CellClick);
+            // 
+            // orderIDDataGridViewTextBoxColumn
+            // 
+            this.orderIDDataGridViewTextBoxColumn.DataPropertyName = "OrderID";
+            this.orderIDDataGridViewTextBoxColumn.HeaderText = "订单号";
+            this.orderIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.orderIDDataGridViewTextBoxColumn.Name = "orderIDDataGridViewTextBoxColumn";
+            this.orderIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // orderClientDataGridViewTextBoxColumn
+            // 
+            this.orderClientDataGridViewTextBoxColumn.DataPropertyName = "OrderClient";
+            this.orderClientDataGridViewTextBoxColumn.HeaderText = "客户名";
+            this.orderClientDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.orderClientDataGridViewTextBoxColumn.Name = "orderClientDataGridViewTextBoxColumn";
+            // 
+            // orderTimeDataGridViewTextBoxColumn
+            // 
+            this.orderTimeDataGridViewTextBoxColumn.DataPropertyName = "OrderTime";
+            this.orderTimeDataGridViewTextBoxColumn.HeaderText = "订单创建时间";
+            this.orderTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.orderTimeDataGridViewTextBoxColumn.Name = "orderTimeDataGridViewTextBoxColumn";
+            this.orderTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // totalMoneyDataGridViewTextBoxColumn
+            // 
+            this.totalMoneyDataGridViewTextBoxColumn.DataPropertyName = "TotalMoney";
+            this.totalMoneyDataGridViewTextBoxColumn.HeaderText = "总金额";
+            this.totalMoneyDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.totalMoneyDataGridViewTextBoxColumn.Name = "totalMoneyDataGridViewTextBoxColumn";
+            this.totalMoneyDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // deliveryAddressDataGridViewTextBoxColumn
+            // 
+            this.deliveryAddressDataGridViewTextBoxColumn.DataPropertyName = "DeliveryAddress";
+            this.deliveryAddressDataGridViewTextBoxColumn.HeaderText = "配送地址";
+            this.deliveryAddressDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.deliveryAddressDataGridViewTextBoxColumn.Name = "deliveryAddressDataGridViewTextBoxColumn";
+            // 
+            // OrderbindingSource
+            // 
+            this.OrderbindingSource.DataSource = typeof(HomeWork5.Order);
             // 
             // panel1
             // 
@@ -196,14 +237,14 @@ namespace HomeWork8
             // export_ToolStripMenuItem
             // 
             this.export_ToolStripMenuItem.Name = "export_ToolStripMenuItem";
-            this.export_ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.export_ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
             this.export_ToolStripMenuItem.Text = "导出";
             this.export_ToolStripMenuItem.Click += new System.EventHandler(this.export_ToolStripMenuItem_Click);
             // 
             // import_ToolStripMenuItem
             // 
             this.import_ToolStripMenuItem.Name = "import_ToolStripMenuItem";
-            this.import_ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.import_ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
             this.import_ToolStripMenuItem.Text = "导入";
             this.import_ToolStripMenuItem.Click += new System.EventHandler(this.import_ToolStripMenuItem_Click);
             // 
@@ -237,6 +278,7 @@ namespace HomeWork8
             this.orderDetailDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.orderDetailDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.GoodsIDDataGridViewTextBoxColumn,
+            this.goodsDataGridViewTextBoxColumn,
             this.goodPriceDataGridViewTextBoxColumn,
             this.amountDataGridViewTextBoxColumn,
             this.moneyDataGridViewTextBoxColumn});
@@ -249,19 +291,9 @@ namespace HomeWork8
             this.orderDetailDataGridView.Size = new System.Drawing.Size(905, 146);
             this.orderDetailDataGridView.TabIndex = 2;
             // 
-            // GoodsIDDataGridViewTextBoxColumn
+            // orderDetailBindingSource
             // 
-            this.GoodsIDDataGridViewTextBoxColumn.DataPropertyName = "goodsID";
-            this.GoodsIDDataGridViewTextBoxColumn.HeaderText = "货号";
-            this.GoodsIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.GoodsIDDataGridViewTextBoxColumn.Name = "GoodsIDDataGridViewTextBoxColumn";
-            // 
-            // goodPriceDataGridViewTextBoxColumn
-            // 
-            this.goodPriceDataGridViewTextBoxColumn.DataPropertyName = "goodsPrice";
-            this.goodPriceDataGridViewTextBoxColumn.HeaderText = "单价";
-            this.goodPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.goodPriceDataGridViewTextBoxColumn.Name = "goodPriceDataGridViewTextBoxColumn";
+            this.orderDetailBindingSource.DataSource = typeof(HomeWork5.OrderDetail);
             // 
             // label1
             // 
@@ -276,6 +308,27 @@ namespace HomeWork8
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog1";
+            // 
+            // GoodsIDDataGridViewTextBoxColumn
+            // 
+            this.GoodsIDDataGridViewTextBoxColumn.DataPropertyName = "goodsID";
+            this.GoodsIDDataGridViewTextBoxColumn.HeaderText = "货号";
+            this.GoodsIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.GoodsIDDataGridViewTextBoxColumn.Name = "GoodsIDDataGridViewTextBoxColumn";
+            // 
+            // goodsDataGridViewTextBoxColumn
+            // 
+            this.goodsDataGridViewTextBoxColumn.DataPropertyName = "goodsName";
+            this.goodsDataGridViewTextBoxColumn.HeaderText = "商品名";
+            this.goodsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.goodsDataGridViewTextBoxColumn.Name = "goodsDataGridViewTextBoxColumn";
+            // 
+            // goodPriceDataGridViewTextBoxColumn
+            // 
+            this.goodPriceDataGridViewTextBoxColumn.DataPropertyName = "goodsPrice";
+            this.goodPriceDataGridViewTextBoxColumn.HeaderText = "单价";
+            this.goodPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.goodPriceDataGridViewTextBoxColumn.Name = "goodPriceDataGridViewTextBoxColumn";
             // 
             // amountDataGridViewTextBoxColumn
             // 
@@ -292,57 +345,6 @@ namespace HomeWork8
             this.moneyDataGridViewTextBoxColumn.Name = "moneyDataGridViewTextBoxColumn";
             this.moneyDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // orderDetailBindingSource
-            // 
-            this.orderDetailBindingSource.DataSource = typeof(HomeWork5.OrderDetail);
-            // 
-            // orderIDDataGridViewTextBoxColumn
-            // 
-            this.orderIDDataGridViewTextBoxColumn.DataPropertyName = "OrderID";
-            this.orderIDDataGridViewTextBoxColumn.HeaderText = "订单号";
-            this.orderIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.orderIDDataGridViewTextBoxColumn.Name = "orderIDDataGridViewTextBoxColumn";
-            this.orderIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // orderClientDataGridViewTextBoxColumn
-            // 
-            this.orderClientDataGridViewTextBoxColumn.DataPropertyName = "OrderClient";
-            this.orderClientDataGridViewTextBoxColumn.HeaderText = "客户名";
-            this.orderClientDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.orderClientDataGridViewTextBoxColumn.Name = "orderClientDataGridViewTextBoxColumn";
-            // 
-            // orderTimeDataGridViewTextBoxColumn
-            // 
-            this.orderTimeDataGridViewTextBoxColumn.DataPropertyName = "OrderTime";
-            this.orderTimeDataGridViewTextBoxColumn.HeaderText = "订单创建时间";
-            this.orderTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.orderTimeDataGridViewTextBoxColumn.Name = "orderTimeDataGridViewTextBoxColumn";
-            this.orderTimeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // totalMoneyDataGridViewTextBoxColumn
-            // 
-            this.totalMoneyDataGridViewTextBoxColumn.DataPropertyName = "TotalMoney";
-            this.totalMoneyDataGridViewTextBoxColumn.HeaderText = "总金额";
-            this.totalMoneyDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.totalMoneyDataGridViewTextBoxColumn.Name = "totalMoneyDataGridViewTextBoxColumn";
-            this.totalMoneyDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // deliveryAddressDataGridViewTextBoxColumn
-            // 
-            this.deliveryAddressDataGridViewTextBoxColumn.DataPropertyName = "DeliveryAddress";
-            this.deliveryAddressDataGridViewTextBoxColumn.HeaderText = "配送地址";
-            this.deliveryAddressDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.deliveryAddressDataGridViewTextBoxColumn.Name = "deliveryAddressDataGridViewTextBoxColumn";
-            // 
-            // OrderbindingSource
-            // 
-            this.OrderbindingSource.DataSource = typeof(HomeWork5.Order);
-            // 
-            // fileSystemWatcher1
-            // 
-            this.fileSystemWatcher1.EnableRaisingEvents = true;
-            this.fileSystemWatcher1.SynchronizingObject = this;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -358,14 +360,13 @@ namespace HomeWork8
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.OrderdataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderbindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderDetailDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderDetailBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OrderbindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,15 +397,15 @@ namespace HomeWork8
         private System.Windows.Forms.DataGridViewTextBoxColumn deliveryAddressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView orderDetailDataGridView;
         private System.Windows.Forms.BindingSource orderDetailBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GoodsIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodsNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn goodPriceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn moneyDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
-        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GoodsIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn goodsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn goodPriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn moneyDataGridViewTextBoxColumn;
     }
 }
 
