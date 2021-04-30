@@ -32,6 +32,9 @@ namespace HomeWork9
             }
             set { }
         }
+        /// <summary>
+        /// 显示爬取情况
+        /// </summary>
         public Action<string, string> ShowCrawlInfo;
 
         public Crawler(string startUrl)
@@ -54,6 +57,7 @@ namespace HomeWork9
                 }
                 if (current == null || count > 30) 
                     break;
+                
                 try
                 {
                     html = DownLoad(current); // 下载网站内容
@@ -65,6 +69,7 @@ namespace HomeWork9
                 {
                     ShowCrawlInfo(current, "错误："+ ex.Message);
                 }
+
                 urls[current] = true;       //标记该网站已被爬取
             
                 Parse(html,current);//解析当前网站内容,并加入新的链接
@@ -107,10 +112,10 @@ namespace HomeWork9
                 //将相对路径转换为绝对路径
                 link = ConvertToAbsoluteUrl(link, currentUrl);
 
-                //只爬取起始网站内的网页
+                //只会爬取起始网站内的网页
                 if(Regex.IsMatch(new Uri(link).Host,HostFilterRegex) && urls[link] == null)
                 {
-                    urls[link] = false;
+                    urls.Add(link, false);
                 }
             }
         }
@@ -124,7 +129,7 @@ namespace HomeWork9
                 linkUri = new Uri(link);
                 //如果link是绝对地址则直接返回,否则进行拼接
                 if (linkUri.IsAbsoluteUri)
-                return link;
+                    return link;
                 else
                 {
                     linkUri = new Uri(currentUri, link);

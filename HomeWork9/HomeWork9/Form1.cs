@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,6 +19,11 @@ namespace HomeWork9
             InitializeComponent();
         }
 
+        private void showCrawlInfo(string url, string info)
+        {
+            rtbCrawlInfo.AppendText($"网址：{url}  {info}\n");
+        }
+
         private void btnAction_Click(object sender, EventArgs e)
         {
             try
@@ -25,7 +31,7 @@ namespace HomeWork9
                 Uri startUri = new Uri(tbStartUrl.Text);
             }catch(UriFormatException ex)
             {
-                MessageBox.Show("请输入正确的网址！");
+                MessageBox.Show(ex.Message + "\n请输入正确的网址！");
                 tbStartUrl.Clear();
                 return;
             }
@@ -35,14 +41,12 @@ namespace HomeWork9
 
             rtbCrawlInfo.Clear();
             rtbCrawlInfo.AppendText("开始爬行了....\n");
+
             crawler.Crawl();
+
             rtbCrawlInfo.AppendText("爬行结束\n");
 
         }
-        private void showCrawlInfo(string url,string info)
-        {
-            string crawlInfo = $"网址：{url}  {info}";
-            rtbCrawlInfo.AppendText(crawlInfo + "\n");
-        }
+
     }
 }
