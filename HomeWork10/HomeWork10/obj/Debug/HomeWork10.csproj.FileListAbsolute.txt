@@ -1,0 +1,10 @@
+D:\VS2019\Project\DotNetHomeWork\HomeWork10\HomeWork10\obj\Debug\HomeWork10.csprojAssemblyReference.cache
+D:\VS2019\Project\DotNetHomeWork\HomeWork10\HomeWork10\obj\Debug\HomeWork10.Properties.Resources.resources
+D:\VS2019\Project\DotNetHomeWork\HomeWork10\HomeWork10\obj\Debug\HomeWork10.csproj.GenerateResource.cache
+D:\VS2019\Project\DotNetHomeWork\HomeWork10\HomeWork10\obj\Debug\HomeWork10.csproj.CoreCompileInputs.cache
+D:\VS2019\Project\DotNetHomeWork\HomeWork10\HomeWork10\bin\Debug\HomeWork10.exe.config
+D:\VS2019\Project\DotNetHomeWork\HomeWork10\HomeWork10\bin\Debug\HomeWork10.exe
+D:\VS2019\Project\DotNetHomeWork\HomeWork10\HomeWork10\bin\Debug\HomeWork10.pdb
+D:\VS2019\Project\DotNetHomeWork\HomeWork10\HomeWork10\obj\Debug\HomeWork10.Form1.resources
+D:\VS2019\Project\DotNetHomeWork\HomeWork10\HomeWork10\obj\Debug\HomeWork10.exe
+D:\VS2019\Project\DotNetHomeWork\HomeWork10\HomeWork10\obj\Debug\HomeWork10.pdb
