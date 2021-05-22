@@ -40,28 +40,28 @@ namespace HomeWork12.Controllers
         [HttpGet("{id}")]
         public ActionResult<Order> GetTodoItem(string id)
         {
-            var todoitem = orderDb.Orders.Include("OrderDetails").SingleOrDefault(t => t.OrderID == id);
-            if (todoitem == null)
+            var query = orderDb.Orders.Include(o=>o.OrderClient).Include(o=>o.OrderDetails).ThenInclude(o => o.OrderGoods).FirstOrDefault();
+            if (query == null)
             {
                 return NotFound();
             }
-            return todoitem;
+            return query;
         }
         [HttpGet("pageQuery")]
         public ActionResult<List<Order>> queryTodoItem(string clientname, string address, double? money, int skip, int take)
         {
-            var query = orderDb.Orders.Include("OrderDetails");
+            var query = orderDb.Orders.Include(o => o.OrderClient).Include(o => o.OrderDetails).ThenInclude(o => o.OrderGoods);
             if (clientname != null)
             {
-                query = query.Include("OrderDetails").Where(o => o.OrderClient.Name.Equals(clientname));
+                query = query.Include(o => o.OrderClient).Include(o => o.OrderDetails).ThenInclude(o => o.OrderGoods);.Where(o => o.OrderClient.Name.Equals(clientname));
             }
             if (address != null)
             {
-                query = query.Include("OrderDetails").Where(o => o.DeliveryAddress.Equals(address));
+                query = query.Include(o => o.OrderClient).Include(o => o.OrderDetails).ThenInclude(o => o.OrderGoods);.Where(o => o.DeliveryAddress.Equals(address));
             }
             if (money != null)
             {
-                query = query.Include("OrderDetails").Where(o => o.TotalMoney == money);
+                query = query.Include(o => o.OrderClient).Include(o => o.OrderDetails).ThenInclude(o => o.OrderGoods);.Where(o => o.TotalMoney == money);
             }
             return query.Skip(skip).Take(take).ToList();
         }
@@ -105,7 +105,7 @@ namespace HomeWork12.Controllers
         {
             try
             {
-                var target = orderDb.Orders.Include("OrderDetails").FirstOrDefault(t => t.OrderID == id);
+                var target = orderDb.Orders.Include(o => o.OrderClient).Include(o => o.OrderDetails).ThenInclude(o => o.OrderGoods).FirstOrDefault(t => t.OrderID == id);
                 if (target != null)
                 {
                     orderDb.OrderDetails.RemoveRange(target.OrderDetails);
